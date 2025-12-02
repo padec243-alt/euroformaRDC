@@ -26,9 +26,10 @@ export default function Home() {
         <AnimatedSection>
           <Events />
         </AnimatedSection>
-        <AnimatedSection>
+        {/* Section Galerie masquée temporairement - à réactiver quand les vraies images seront disponibles */}
+        {/* <AnimatedSection>
           <Gallery />
-        </AnimatedSection>
+        </AnimatedSection> */}
         <AnimatedSection>
           <News />
         </AnimatedSection>

@@ -3,7 +3,8 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { ArrowRight, User, Mail, Book, MessageSquare, MapPin, Phone, Globe } from "lucide-react";
+import { ArrowRight, User, Mail, Book, MessageSquare, MapPin, Phone, Globe, Loader2 } from "lucide-react";
+import { useState } from "react";
 
 import Header from "@/components/header";
 import Footer from "@/components/footer";
@@ -36,6 +37,7 @@ const formSchema = z.object({
 
 export default function ContactPage() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -47,13 +49,39 @@ export default function ContactPage() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: "Message envoyé !",
-      description: "Nous avons bien reçu votre message et nous vous répondrons dans les plus brefs délais.",
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Erreur lors de l\'envoi');
+      }
+
+      toast({
+        title: "Message envoyé ! ✉️",
+        description: "Nous avons bien reçu votre message. Un email de confirmation vous a été envoyé.",
+      });
+      form.reset();
+    } catch (error) {
+      console.error('Erreur:', error);
+      toast({
+        title: "Erreur",
+        description: "Une erreur est survenue lors de l'envoi. Veuillez réessayer.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -146,9 +174,18 @@ export default function ContactPage() {
                                 </FormItem>
                             )}
                             />
-                            <Button type="submit" size="lg" className="w-full font-bold">
-                                Envoyer le message
-                                <ArrowRight className="ml-2 h-5 w-5" />
+                            <Button type="submit" size="lg" className="w-full font-bold" disabled={isSubmitting}>
+                                {isSubmitting ? (
+                                  <>
+                                    <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                                    Envoi en cours...
+                                  </>
+                                ) : (
+                                  <>
+                                    Envoyer le message
+                                    <ArrowRight className="ml-2 h-5 w-5" />
+                                  </>
+                                )}
                             </Button>
                         </form>
                     </Form>
@@ -167,28 +204,21 @@ export default function ContactPage() {
                                 <MapPin className="h-6 w-6 text-primary mt-1" />
                                 <div>
                                     <h4 className="font-semibold">Adresse</h4>
-                                    <p className="text-muted-foreground">67 Boulevard Du 30 juin, Immeuble Golf 3è niveau, Local 10, Kinshasa</p>
-                                </div>
-                            </div>
-                             <div className="flex items-start gap-4">
-                                <Phone className="h-6 w-6 text-primary mt-1" />
-                                <div>
-                                    <h4 className="font-semibold">Téléphone</h4>
-                                    <p className="text-muted-foreground">+243 000 000 000</p>
+                                    <p className="text-muted-foreground">67 BLVD du 30 juin, Gombe, Kinshasa, RDC</p>
                                 </div>
                             </div>
                              <div className="flex items-start gap-4">
                                 <Mail className="h-6 w-6 text-primary mt-1" />
                                 <div>
                                     <h4 className="font-semibold">Email</h4>
-                                    <p className="text-muted-foreground">contact@euroformardc.com</p>
+                                    <p className="text-muted-foreground">contact@euroforma-rdc.com</p>
                                 </div>
                             </div>
                               <div className="flex items-start gap-4">
                                 <Globe className="h-6 w-6 text-primary mt-1" />
                                 <div>
                                     <h4 className="font-semibold">Site Web</h4>
-                                    <p className="text-muted-foreground">euroformardc.com</p>
+                                    <p className="text-muted-foreground">euroforma-rdc.com</p>
                                 </div>
                             </div>
                         </CardContent>

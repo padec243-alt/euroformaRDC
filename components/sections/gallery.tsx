@@ -22,7 +22,7 @@ export default function Gallery() {
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Notre Gallerie
+            Notre Galerie
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Plongez dans l'univers Euroforma RDC en images.

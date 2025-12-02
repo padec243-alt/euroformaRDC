@@ -1,22 +1,28 @@
 import Link from "next/link";
 import Image from 'next/image';
+import { MapPin, Globe, Mail } from "lucide-react";
 
 const quickLinks = {
-  "Formations courte": [
-    "Management & Stratégie",
-    "Pedagogie",
-    "Technologie & numérique",
-    "Communication",
-    "Droit",
-    "Prospective internationale",
+  "Formations courtes": [
+    { name: "Management & Stratégie", href: "/formations" },
+    { name: "Pédagogie", href: "/formations" },
+    { name: "Technologie & numérique", href: "/formations" },
+    { name: "Communication", href: "/formations" },
+    { name: "Droit", href: "/formations" },
+    { name: "Prospective internationale", href: "/formations" },
   ],
-  "Formation Longue": [
-    "Formations longue",
-    "US CERTIFICATE EXECUTIVE",
-    "US CERTIFICATE PROFESSIONAL",
+  "Formations longues": [
+    { name: "US CERTIFICATE EXECUTIVE", href: "/formations" },
+    { name: "US CERTIFICATE PROFESSIONAL", href: "/formations" },
   ],
-  "Nous": ["A propos", "Contact"],
-  "Plus": ["Inscription"],
+  "Nous": [
+    { name: "À propos", href: "/#about" },
+    { name: "Contact", href: "/contact" },
+  ],
+  "Plus": [
+    { name: "Inscription", href: "/inscription" },
+    { name: "Formations", href: "/formations" },
+  ],
 };
 
 const FooterLogo = () => (
@@ -43,12 +49,24 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div className="lg:col-span-1">
             <FooterLogo />
-            <p className="mt-4 text-sm text-primary-foreground/80">
-              67 Boulevard Du 30 juin, Immeuble Golf 3è niveau, Local 10, Kinshasa.
-            </p>
-            <p className="mt-2 text-sm text-primary-foreground/80">
-              Site web: euroformardc.com
-            </p>
+            <div className="mt-6 space-y-3 text-sm text-primary-foreground/80">
+              <div className="flex items-center gap-3">
+                <MapPin className="h-5 w-5 flex-shrink-0 text-primary-foreground/60" />
+                <span>67 BLVD du 30 juin, Gombe, Kinshasa, RDC</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Globe className="h-5 w-5 flex-shrink-0 text-primary-foreground/60" />
+                <Link href="https://euroforma-rdc.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                  euroforma-rdc.com
+                </Link>
+              </div>
+              <div className="flex items-center gap-3">
+                <Mail className="h-5 w-5 flex-shrink-0 text-primary-foreground/60" />
+                <Link href="mailto:contact@euroforma-rdc.com" className="hover:underline">
+                  contact@euroforma-rdc.com
+                </Link>
+              </div>
+            </div>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:col-span-2">
             {Object.entries(quickLinks).map(([title, links]) => (
@@ -56,13 +74,9 @@ export default function Footer() {
                 <p className="font-headline font-medium">{title}</p>
                 <ul className="mt-6 space-y-4 text-sm">
                   {links.map((link) => (
-                    <li key={link}>
-                      <Link href={
-                        link === 'Inscription' ? '/inscription' : 
-                        link === 'Contact' ? '/contact' : 
-                        '#'
-                      } className="text-primary-foreground/80 transition hover:opacity-75">
-                        {link}
+                    <li key={link.name}>
+                      <Link href={link.href} className="text-primary-foreground/80 transition hover:opacity-75">
+                        {link.name}
                       </Link>
                     </li>
                   ))}
@@ -76,8 +90,15 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Euroforma RDC. All rights reserved.
           </p>
           <p className="mt-2 text-xs text-primary-foreground/60">
+            Conçu par{" "}
+            <Link href="https://padec243.org" target="_blank" rel="noopener noreferrer" className="font-semibold transition hover:opacity-75">
+              LA PADEC
+            </Link>
+          </p>
+          <p className="mt-1 text-xs text-primary-foreground/60">
+            Développé par{" "}
             <Link href="https://www.charmant-nyungu.com" target="_blank" rel="noopener noreferrer" className="transition hover:opacity-75">
-              Développé par Charmant Nyungu K.
+              Charmant Nyungu K.
             </Link>
           </p>
         </div>

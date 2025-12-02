@@ -17,8 +17,7 @@ import {
 const navLinks = [
   { href: '/', label: 'Accueil' },
   { href: '/#about', label: 'À Propos' },
-  { href: '/#formations', label: 'Formations' },
-  { href: '/#gallery', label: 'Gallerie' },
+  { href: '/formations', label: 'Formations' },
   { href: '/#news', label: 'Actualités' },
   { href: '/contact', label: 'Contact' },
 ];
