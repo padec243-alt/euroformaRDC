@@ -1,0 +1,130 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "A modern classroom with students engaged in a workshop.",
+      "imageUrl": "https://images.unsplash.com/photo-1733758283615-224f76ab0792?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjbGFzc3Jvb20lMjB0cmFpbmluZ3xlbnwwfHx8fDE3NjIxNjQzMzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "classroom training"
+    },
+    {
+      "id": "event-1",
+      "description": "Autumn Science Lectures",
+      "imageUrl": "https://images.unsplash.com/photo-1758685734622-3e0a002b2f53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzY2llbmNlJTIwbGVjdHVyZXxlbnwwfHx8fDE3NjIxMTE0MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "science lecture"
+    },
+    {
+      "id": "event-2",
+      "description": "Build Education Website Using WordPress",
+      "imageUrl": "https://images.unsplash.com/photo-1678341859828-bfb1a2bd527a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b3JkcHJlc3MlMjB3ZWJzaXRlfGVufDB8fHx8MTc2MjE3MjMzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wordpress website"
+    },
+    {
+      "id": "event-3",
+      "description": "Elegant Light Box Paper Cut Dioramas",
+      "imageUrl": "https://images.unsplash.com/photo-1528041705046-e08739849a65?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGFwZXIlMjBhcnR8ZW58MHx8fHwxNzYyMTcyMzM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "paper art"
+    },
+    {
+      "id": "news-1",
+      "description": "L’importance de la formation continue",
+      "imageUrl": "https://images.unsplash.com/photo-1551733186-ef2fa2d99a1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxib29rcyUyMHN0dWR5fGVufDB8fHx8MTc2MjE3MjMzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "books study"
+    },
+    {
+      "id": "news-2",
+      "description": "Maîtrisez votre temps : techniques efficaces pour rester productif",
+      "imageUrl": "https://images.unsplash.com/photo-1620912189866-474843ba5c14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dGltZSUyMG1hbmFnZW1lbnR8ZW58MHx8fHwxNzYyMTcyMzM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "time management"
+    },
+    {
+      "id": "news-3",
+      "description": "Les secrets d'un networking réussi",
+      "imageUrl": "https://images.unsplash.com/photo-1675716921224-e087a0cca69a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG5ldHdvcmtpbmd8ZW58MHx8fHwxNzYyMTcyMzM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business networking"
+    },
+    {
+      "id": "testimonial-1",
+      "description": "Avatar for Amina MAKABI",
+      "imageUrl": "https://images.unsplash.com/photo-1546961329-78bef0414d7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2MjE1NDMxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "testimonial-2",
+      "description": "Avatar for Pascal KENGE",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjIxMTM4MTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "testimonial-3",
+      "description": "Avatar for Serge TSHIMANGA",
+      "imageUrl": "https://images.unsplash.com/photo-1639747280804-dd2d6b3d88ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYW4lMjBzbWlsaW5nfGVufDB8fHx8MTc2MjE2MTk4NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man smiling"
+    },
+    {
+      "id": "partner-1",
+      "description": "Partner logo 1",
+      "imageUrl": "https://images.unsplash.com/photo-1496200186974-4293800e2c20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjb21wYW55JTIwbG9nb3xlbnwwfHx8fDE3NjIxNDA1MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "company logo"
+    },
+    {
+      "id": "partner-2",
+      "description": "Partner logo 2",
+      "imageUrl": "https://images.unsplash.com/photo-1605898643907-844c2bfc764e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwbG9nb3xlbnwwfHx8fDE3NjIxNDEyMTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tech logo"
+    },
+    {
+      "id": "partner-3",
+      "description": "Partner logo 3",
+      "imageUrl": "https://images.unsplash.com/photo-1517602302552-471fe67acf66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxicmFuZCUyMGxvZ298ZW58MHx8fHwxNzYyMTQxMjE1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "brand logo"
+    },
+    {
+      "id": "partner-4",
+      "description": "Partner logo 4",
+      "imageUrl": "https://images.unsplash.com/photo-1760138270903-d95903188730?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGxvZ298ZW58MHx8fHwxNzYyMTYxMDUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business logo"
+    },
+    {
+      "id": "partner-5",
+      "description": "Partner logo 5",
+      "imageUrl": "https://images.unsplash.com/photo-1755586258247-67f5148d76c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhYnN0cmFjdCUyMGxvZ298ZW58MHx8fHwxNzYyMTEyNTI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract logo"
+    },
+    {
+      "id": "gallery-1",
+      "description": "Students collaborating in a workshop",
+      "imageUrl": "https://images.unsplash.com/photo-1758270704763-22072a90d3b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzdHVkZW50JTIwY29sbGFib3JhdGlvbnxlbnwwfHx8fDE3NjIxMDkzMzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "student collaboration"
+    },
+    {
+      "id": "gallery-2",
+      "description": "Professor giving a lecture",
+      "imageUrl": "https://images.unsplash.com/photo-1603239230811-72ce793c4393?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx1bml2ZXJzaXR5JTIwbGVjdHVyZXxlbnwwfHx8fDE3NjIxNzMxMDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "university lecture"
+    },
+    {
+      "id": "gallery-3",
+      "description": "Modern university campus",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1554473675-d0904f3cbf38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx1bml2ZXJzaXR5JTIwY2FtcHVzfGVufDB8fHx8MTc2MjE0MjQ4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "university campus"
+    },
+    {
+      "id": "gallery-4",
+      "description": "Students celebrating graduation",
+      "imageUrl": "https://images.unsplash.com/photo-1631131428457-3c14bdcb81d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzdHVkZW50JTIwZ3JhZHVhdGlvbnxlbnwwfHx8fDE3NjIxMTY2NzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "student graduation"
+    },
+    {
+      "id": "gallery-5",
+      "description": "A quiet library study area",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1557699331-4ffdad25140e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxsaWJyYXJ5JTIwc3R1ZHl8ZW58MHx8fHwxNzYyMTU2MTEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "library study"
+    },
+    {
+      "id": "gallery-6",
+      "description": "Close-up of a student writing notes",
+      "imageUrl": "https://images.unsplash.com/photo-1517971129774-8a2b38fa128e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzdHVkZW50JTIwd3JpdGluZ3xlbnwwfHx8fDE3NjIwODY1MTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "student writing"
+    }
+  ]
+}
