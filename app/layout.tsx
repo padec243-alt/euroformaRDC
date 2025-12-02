@@ -3,6 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://euroforma-rdc.com'),
   title: 'Euroforma RDC Digital',
   description: "Former les leaders d'aujourd'hui, façonner les stratégies de demain.",
   icons: {

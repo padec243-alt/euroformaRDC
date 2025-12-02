@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { ArrowRight, User, Mail, Globe, BookOpen, Library, Loader2 } from "lucide-react";
 import { useSearchParams } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 
 // Liste des pays avec RDC et Congo Brazza en premier, puis ordre alphabétique
 const countries = [
@@ -210,7 +210,7 @@ type Module = {
   title: string;
 };
 
-export default function InscriptionPage() {
+function InscriptionForm() {
   const { toast } = useToast();
   const searchParams = useSearchParams();
   const formationSlug = searchParams.get('formation');
@@ -478,5 +478,41 @@ export default function InscriptionPage() {
       </main>
       <Footer />
     </div>
+  );
+}
+
+// Composant de chargement pour le Suspense
+function InscriptionLoading() {
+  return (
+    <div className="flex min-h-screen flex-col bg-background">
+      <Header />
+      <main className="flex-1 py-12 sm:py-16">
+        <div className="container mx-auto flex max-w-7xl items-center justify-center px-4 sm:px-6 lg:px-8">
+          <Card className="w-full max-w-2xl shadow-2xl">
+            <CardHeader className="text-center">
+              <CardTitle className="font-headline text-3xl font-bold">
+                Formulaire d&apos;inscription
+              </CardTitle>
+              <CardDescription>
+                Chargement...
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="flex justify-center py-12">
+              <Loader2 className="h-8 w-8 animate-spin text-primary" />
+            </CardContent>
+          </Card>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
+// Export par défaut avec Suspense
+export default function InscriptionPage() {
+  return (
+    <Suspense fallback={<InscriptionLoading />}>
+      <InscriptionForm />
+    </Suspense>
   );
 }
